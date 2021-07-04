@@ -1,6 +1,7 @@
 const slides = Array.from(document.querySelectorAll(".carouselPhoto"));
 const carousel = document.querySelectorAll(".carousel");
 const buttons = document.querySelectorAll(".buttons div");
+const dotElement = document.querySelector(".dots");
 
 function getNextPrev(){
     const activeSlide =document.querySelector(".carouselPhoto.active");
@@ -64,6 +65,7 @@ current.style.transform= "translate(-100%)";
 next.classList.add("active");
 next.style.transform = "translate(0)";
 getPosition();
+getActiveDot();
 
 }
 function getPrevSlide(){
@@ -81,5 +83,28 @@ current.style.transform = "translate(100%)";
 prev.classList.add("active");
 prev.style.transform="translateX(0)";
 getPosition();
+getActiveDot();
 
 }
+
+//indicator functions
+
+slides.forEach(carouselPhoto =>{
+    const dot = document.createElement("div");
+    dot.classList.add("dot");
+    dotElement.appendChild(dot);
+})
+
+function getActiveDot(){
+    const allDots = document.querySelectorAll(".dots .dot");
+    const activeSlide =document.querySelector(".carouselPhoto.active");
+    const activeIndex= slides.indexOf(activeSlide); 
+   
+allDots.forEach(dot=>{
+    dot.classList.remove("active");
+})
+
+    allDots[activeIndex].classList.add("active");
+}
+
+getActiveDot();
