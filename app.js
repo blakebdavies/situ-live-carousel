@@ -38,17 +38,17 @@ slides.forEach((carouselPhoto, index)=>{
 
     carouselPhoto.addEventListener("transitionend", () => {
         carouselPhoto.classList.remove("top");
-    })
-})
+    });
+});
 }
 getPosition();
 
-buttons.forEach(button =>{
-    button.addEventListener("click", ()=> {
-        if(button.classList.contains("next")) getNextSlide()
+buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+        if(button.classList.contains("next")) getNextSlide();
         else if(button.classList.contains("prev")) getPrevSlide();
-    })
-})
+    });
+});
 
 function getNextSlide(){
 const current =document.querySelector(".carouselPhoto.active");
@@ -74,35 +74,31 @@ const[next, prev]= getNextPrev();
 
 current.classList.add("top");
 prev.classList.add("top");
-
-if(current.classList.contains("top")){
-    return;
-}
-current.classList.remove("active");
 current.style.transform = "translate(100%)";
-prev.classList.add("active");
+current.classList.remove("active");
 prev.style.transform="translateX(0)";
+prev.classList.add("active");
 getPosition();
 getActiveDot();
-
 }
+getPosition();
 
 //indicator functions
 
-slides.forEach(carouselPhoto =>{
+slides.forEach((carouselPhoto) => {
     const dot = document.createElement("div");
     dot.classList.add("dot");
     dotElement.appendChild(dot);
-})
+});
 
 function getActiveDot(){
     const allDots = document.querySelectorAll(".dots .dot");
     const activeSlide =document.querySelector(".carouselPhoto.active");
     const activeIndex= slides.indexOf(activeSlide); 
    
-allDots.forEach(dot=>{
+allDots.forEach((dot) => {
     dot.classList.remove("active");
-})
+});
 
     allDots[activeIndex].classList.add("active");
 }
@@ -111,12 +107,12 @@ function functionalDots(){
     allDots.forEach((dot, index) => {
         dot.addEventListener("click", () =>{
         getDotSlide(index);
-        })
-    })
+        });
+    });
 }
 
-function getDotSlide(index){
-slides.forEach(carouselPhoto =>{
+function getDotSlide(index) {
+slides.forEach((carouselPhoto) =>{
     carouselPhoto.classList.remove("active");
 });
 slides[index].classList.add("active");
