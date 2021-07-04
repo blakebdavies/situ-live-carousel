@@ -113,3 +113,16 @@ h1 {
   background-color: white;
   width: 40px;
 }
+
+@media all and (max-width: 768px) {
+  .prev,
+  .next {
+    font-size: 20px;
+  }
+  .slide-3 {
+    background-position: 85%;
+  }
+  .dots {
+    margin-bottom: 30px;
+  }
+}
