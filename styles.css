@@ -30,11 +30,17 @@ h1 {
   align-items: center;
   justify-content: center;
   position: absolute;
+  z-index: -1;
   transform: translate(100%);
 }
 
 .carouselPhoto.active {
   transform: translate(0%);
+}
+
+.carouselPhoto.top {
+  transition: 0.5s ease transform;
+  z-index: 3;
 }
 .carouselPhoto::after {
   content: " ";
@@ -63,8 +69,8 @@ h1 {
   background-image: url(images/analytics.jpg);
 }
 
-.carousel-button-prev,
-.carousel-button-next {
+.prev,
+.next {
   font-size: 28px;
   position: absolute;
   top: 50%;
@@ -75,10 +81,10 @@ h1 {
   width: auto;
 }
 
-.carousel-button-prev {
+.prev {
   left: 10px;
 }
 
-.carousel-button-next {
+.next {
   right: 10px;
 }

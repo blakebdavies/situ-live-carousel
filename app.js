@@ -34,7 +34,35 @@ slides.forEach((carouselPhoto, index)=>{
     } else {
         carouselPhoto.style.transform ="translate(100%)";
     }
+
+    carouselPhoto.addEventListener("transitionend", () => {
+        carouselPhoto.classList.remove("top");
+    })
 })
 }
 getPosition();
 
+buttons.forEach(button =>{
+    button.addEventListener("click", ()=> {
+        if(button.classList.contains("next")) getNextSlide()
+        else if(button.classList.contains("prev")) getPrevSlide();
+    })
+})
+
+function getNextSlide(){
+const current =document.querySelector(".carouselPhoto.active");
+const [next, prev] = getNextPrev();
+
+current.classList.add("top");
+next.classList.add("top");
+
+current.classList.remove("active");
+current.style.transform= "translate(-100%)";
+next.classList.add("active");
+next.style.transform = "translate(0)";
+
+}
+function getPrevSlide(){
+    console.log("getting Prev Slide");
+
+}
