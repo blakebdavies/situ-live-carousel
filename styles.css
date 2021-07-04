@@ -1,0 +1,39 @@
+h1 {
+  text-align: center;
+}
+.carousel-wrapper {
+  width: 90%;
+  height: 100vh;
+  width: 100%;
+}
+.carousel-wrapper * {
+  box-sizing: border-box;
+}
+
+.carousel {
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-photo {
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.slide-1 {
+  background-image: url(images/space.jpg);
+}
+
+.slide-2 {
+  background-image: url(images/storytelling.jpg);
+}
+
+.slide-3 {
+  background-image: url(images/sales.jpg);
+}
+
+.slide-4 {
+  background-image: url(images/analytics.jpg);
+}
