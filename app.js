@@ -106,5 +106,23 @@ allDots.forEach(dot=>{
 
     allDots[activeIndex].classList.add("active");
 }
+function functionalDots(){
+    const allDots = document.querySelectorAll(".dots .dot");
+    allDots.forEach((dot, index) => {
+        dot.addEventListener("click", () =>{
+        getDotSlide(index);
+        })
+    })
+}
+
+function getDotSlide(index){
+slides.forEach(carouselPhoto =>{
+    carouselPhoto.classList.remove("active");
+});
+slides[index].classList.add("active");
+getPosition();
+getActiveDot();
+}
 
 getActiveDot();
+functionalDots();
