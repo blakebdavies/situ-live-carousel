@@ -1,10 +1,14 @@
 * {
   color: white;
 }
+
+body {
+  background-color: #f6f7f8;
+}
 h1 {
   font-size: 30px;
   text-align: center;
-  color: black;
+  color: #081d4d;
 }
 
 h2 {
@@ -14,13 +18,51 @@ h2 {
 p {
   font-size: 18px;
 }
+nav {
+  padding: 5px;
+  background-color: #081d4d;
+}
+
+nav img {
+  display: flex;
+  max-height: 80px;
+  float: left;
+}
+nav li {
+  font-size: 30px;
+  text-align: right;
+  margin-right: 20px;
+  list-style: none;
+}
 section {
   margin: 20px;
   padding: 10px;
 }
+
+button {
+  font-size: 18px;
+  line-height: 47px;
+  background-color: #00c8b7;
+  border: 2px solid #00c8b7;
+  border-radius: 25px;
+  display: block;
+  vertical-align: middle;
+  margin: 20px auto;
+  padding: 0 40px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+button:hover {
+  color: #00c8b7;
+  background-color: white;
+}
+
 .subtitle {
   font-size: 16px;
-  color: black;
+  color: #272d38;
   padding: 10px;
   align-items: center;
 }
@@ -73,7 +115,7 @@ section {
   width: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.692);
+  background-color: rgba(0, 0, 0, 0.295);
   z-index: -1;
 }
 
@@ -138,6 +180,11 @@ section {
 }
 
 @media all and (max-width: 768px) {
+  section {
+    margin: 0;
+    padding: 0;
+  }
+
   .prev,
   .next {
     font-size: 20px;
