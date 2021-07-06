@@ -18,22 +18,7 @@ h2 {
 p {
   font-size: 18px;
 }
-nav {
-  padding: 5px;
-  background-color: #081d4d;
-}
 
-nav img {
-  display: flex;
-  max-height: 80px;
-  float: left;
-}
-nav li {
-  font-size: 30px;
-  text-align: right;
-  margin-right: 20px;
-  list-style: none;
-}
 section {
   margin: 20px;
   padding: 10px;
@@ -58,6 +43,31 @@ button {
 button:hover {
   color: #00c8b7;
   background-color: white;
+}
+.navbar {
+  color: white;
+  background-color: #081d4d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 33px;
+}
+.navbar img {
+  display: flex;
+  max-height: 80px;
+  float: left;
+}
+.navbar ul {
+  list-style: none;
+}
+.navbar li {
+  display: inline-block;
+  margin-right: 20px;
+  padding: 20px 10px;
+}
+
+.navbar .logo-sm.logo-sm {
+  display: none;
 }
 
 .subtitle {
@@ -198,5 +208,15 @@ button:hover {
   .dot {
     height: 8px;
     width: 8px;
+  }
+}
+@media all and (max-width: 480px) {
+  .navbar .logo-sm.logo-sm {
+    display: block;
+    max-width: 100%;
+    margin-left: 20px;
+  }
+  .navbar .logo-lg.logo-lg {
+    display: none;
   }
 }
