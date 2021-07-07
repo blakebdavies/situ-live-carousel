@@ -46,13 +46,13 @@ h2 {
   font-family: "EuclidTriangleSemiBold";
 }
 h1 {
-  font-size: 30px;
+  font-size: 45px;
   text-align: center;
   color: #081d4d;
 }
 
 h2 {
-  font-size: 25px;
+  font-size: 35px;
 }
 
 p {
@@ -120,6 +120,9 @@ button:hover {
 
 .content {
   max-width: 50%;
+}
+.content p {
+  font-size: 25px;
 }
 .carousel-wrapper {
   width: 90%;
@@ -231,6 +234,18 @@ button:hover {
 }
 
 @media all and (max-width: 768px) {
+  h1 {
+    font-size: 35px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  .content p {
+    font-size: 20px;
+  }
+
   section {
     margin: 0;
     padding: 0;
@@ -252,6 +267,18 @@ button:hover {
   }
 }
 @media all and (max-width: 480px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  .content p {
+    font-size: 18px;
+  }
+
   .navbar .logo-sm.logo-sm {
     display: block;
     max-width: 100%;
@@ -263,5 +290,9 @@ button:hover {
 
   .subtitle {
     display: none;
+  }
+
+  .carousel-wrapper {
+    height: 70vh;
   }
 }
