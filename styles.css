@@ -120,7 +120,7 @@ button:hover {
 }
 
 .content {
-  max-width: 85%;
+  max-width: 65%;
 }
 .content p {
   font-size: 20px;
@@ -294,10 +294,6 @@ button:hover {
 
   .carousel-wrapper {
     height: 70vh;
-  }
-
-  .content {
-    max-width: 68%;
   }
 
   .content p {
